@@ -1,10 +1,8 @@
 import { Router } from "express";
-
+import userRoutes from "./user.routes"
 
 const router = Router();
 
-router.use("/api", (req, res) => {
-    res.send("Hello World")
-})
+router.use(userRoutes)
 
 export { router }
