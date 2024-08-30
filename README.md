@@ -3,15 +3,15 @@
 ```
 npm install
 ```
+### .env
+```
+PORT=
+URI=
+```
 ### Run the project
 ```
 npm run start
 ```
 ```
 npm run dev
-```
-### .env
-```
-PORT=
-URI=
 ```
