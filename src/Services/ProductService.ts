@@ -2,15 +2,15 @@ import Product, { IProduct } from "../Models/Product";
 import { ID } from "./UserService";
 
 class ProductService {
-    constructor() { }
+    constructor() {};
 
     async findAll() {
         return await Product.find();
-    }
+    };
 
     async createProduct(product: IProduct) {
         return await Product.create(product)
-    }
+    };
 
     async update(id: ID, updateData: IProduct) {
         const updateProduct = await Product.findByIdAndUpdate(id, updateData, {
@@ -23,7 +23,7 @@ class ProductService {
         };
 
         return updateProduct;
-    }
+    };
 
     async delete(id:ID) {
         return await Product.findByIdAndDelete(id)

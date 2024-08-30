@@ -6,7 +6,7 @@ export interface IProduct {
     price: number,
     category: string
     stock: number
-}
+};
 
 const productSchema = new Schema({
     name: { type: String, required: true },
@@ -14,6 +14,6 @@ const productSchema = new Schema({
     price: { type: Number, required: true },
     category: { type: String, required: true },
     stock: { type: Number, required: true }
-})
+});
 
-export default model('product', productSchema)
+export default model('product', productSchema);

@@ -22,8 +22,8 @@ export const createProduct = async (req: Request, res: Response) => {
         return res.status(500).json({
             message: err.message
         });
-    }
-}
+    };
+};
 
 export const updateProduct = async (req: Request, res: Response) => {
     const { id } = req.params;
@@ -54,10 +54,10 @@ export const deleteProduct = async (req: Request, res: Response) => {
                 message: 'Product not found'
             });
         }
-        return res.status(200).json({message: 'User deleted'})
+        return res.status(200).json({message: 'User deleted'});
     } catch (err: any) {
         return res.status(500).json({
             message: err.message
-        })
-    }
-}
+        });
+    };
+};

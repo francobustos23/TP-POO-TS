@@ -11,26 +11,27 @@ class Server  {
     constructor() {
         this.app = express();
         this.port = PORT;
-        this.dbConnect()
-        this.middlewares()
-        this.routes()
-    }
+        this.dbConnect();
+        this.middlewares();
+        this.routes();
+    };
     
     async dbConnect() {
-        await dbConnection()
-    }
+        await dbConnection();
+    };
 
     middlewares() {
         this.app.use(express.json());
-    }
+    };
+
     routes() {
-        this.app.use(router)
-    }
+        this.app.use(router);
+    };
 
     listen() {
-        this.app.listen(this.port, () => console.log(`🟢 Server is running on port http://localhost:${this.port}`))
-    }
-}
+        this.app.listen(this.port, () => console.log(`🟢 Server is running on port http://localhost:${this.port}`));
+    };
+};
 
-export default Server
+export default Server;
 

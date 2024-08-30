@@ -1,7 +1,7 @@
 import User from "../Models/User";
 import { User as Us } from '../Models/User';
 
-export type ID = string | number
+export type ID = string | number;
 
 class UserService {
     constructor() { };

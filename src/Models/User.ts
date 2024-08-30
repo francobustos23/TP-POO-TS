@@ -5,7 +5,7 @@ export interface User {
     email: string,
     password: string,
     role: string
-}
+};
 
 const userSchema = new Schema<User>({
     user: {type: String, required: true},
@@ -14,6 +14,6 @@ const userSchema = new Schema<User>({
     role: {type: String, required: true}
 },{
     timestamps: true
-})
+});
 
 export default model<User>('user', userSchema);
