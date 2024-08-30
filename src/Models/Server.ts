@@ -12,6 +12,7 @@ class Server  {
         this.app = express();
         this.port = PORT;
         this.dbConnect()
+        this.middlewares()
         this.routes()
     }
     
@@ -19,6 +20,9 @@ class Server  {
         await dbConnection()
     }
 
+    middlewares() {
+        this.app.use(express.json());
+    }
     routes() {
         this.app.use(router)
     }
