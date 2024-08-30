@@ -1,7 +1,7 @@
 import { Router } from "express";
 import { createUser, deleteUser, getUsers, updateUser } from "../Controllers/user.controllers";
 
-const router = Router();
+const router: Router = Router();
 
 router.use('/users', getUsers);
 router.post('/user', createUser);
