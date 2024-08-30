@@ -3,6 +3,6 @@ import userRoutes from "./user.routes"
 
 const router = Router();
 
-router.use(userRoutes)
+router.use('/api', userRoutes)
 
 export { router }
