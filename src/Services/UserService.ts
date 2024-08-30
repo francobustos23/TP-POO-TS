@@ -1,10 +1,10 @@
 import User from "../Models/User";
-import { User as Us} from '../Models/User';
+import { User as Us } from '../Models/User';
 
-type ID = string | number
+export type ID = string | number
 
 class UserService {
-    constructor() {};
+    constructor() { };
 
     async findAll() {
         return await User.find();
@@ -14,20 +14,20 @@ class UserService {
         return await User.create(user);
     };
 
-    async update(id:ID, updateData:Us) {
+    async update(id: ID, updateData: Us) {
         const updateUser = await User.findByIdAndUpdate(id, updateData, {
             new: true,
             runValidators: true
         });
 
-        if(!updateUser) {
+        if (!updateUser) {
             return null;
         };
 
         return updateUser;
     };
 
-    async delete(id:ID) {
+    async delete(id: ID) {
         return await User.findByIdAndDelete(id);
     };
 };
